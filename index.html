@@ -11,6 +11,7 @@
 
 
     <script>
+        
         var digitalData = digitalData || {};
         digitalData = {
             page: {
@@ -23,6 +24,26 @@
                 loginStatus: "",
             },
         };
+
+        function handleClick(category,href){
+        var eventInfo = {
+        eventAction: "ctaClick",
+        eventName: "Click on " + category,
+        eventCategory: category,
+        eventTimestamp: new Date().toISOString(),
+        eventHref: href
+    }
+    
+    _satellite.track('Link_Click', {
+        eventAction: eventInfo.eventAction,
+        eventName: eventInfo.eventName,
+        eventCategory: eventInfo.eventCategory
+    })
+        }
+        
+
+    console.log(eventInfo.eventAction);
+    
     </script>
 
     <title>Geometrixx Clothiers</title>
@@ -103,19 +124,19 @@
                             <!--Menu Start-->
                             <ul id="sddm">
 
-                                <li><a href="women/women.html" onmouseover="mopen('m2')" onmouseout="mclosetime()">WOMEN</a>
+                                <li><a href="women/women.html" onmouseover="mopen('m2')" onmouseout="mclosetime()" onclick="handleClick('women')">WOMEN</a>
                                     <div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-                                        <a href="women/activewear/activewear.html">Activewear</a>
-                                        <a href="women/fineapparel/fineapparel.html">Fine Apparel</a>
+                                        <a href="women/activewear/activewear.html" onclick="handleClick('women_activewear')">Activewear</a>
+                                        <a href="women/fineapparel/fineapparel.html"onclick="handleClick('women_fineapparel')">Fine Apparel</a>
                                         <a href="#">Footwear</a>
                                         <a href="#">Handbags</a>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="men/men.html" onmouseover="mopen('m3')" onmouseout="mclosetime()">MEN</a>
+                                    <a href="men/men.html" onmouseover="mopen('m3')" onmouseout="mclosetime()"onclick="handleClick('men')">MEN</a>
                                     <div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-                                        <a href="men/activewear/activewear.html">Activewear</a>
-                                        <a href="men/fineapparel/fineapparel.html">Fine Apparel</a>
+                                        <a href="men/activewear/activewear.html"onclick="handleClick('men_activewear')">Activewear</a>
+                                        <a href="men/fineapparel/fineapparel.html"onclick="handleClick('men_fineapparel')">Fine Apparel</a>
                                         <a href="#">Footwear</a>
                                         <a href="#">Accessories</a>
                                     </div>
@@ -198,9 +219,9 @@
                     <td>
                         <img src="https://ats-sb.adobe.com/jjsite/include/images/jjhomegraphic.jpg" width="812" height="507" usemap="#jjmap" border="0" />
                         <map name="jjmap">
-                            <area shape="rect" coords="0,0,337,507" href="men/fineapparel/fineapparel.html?intcmp=hp-men_fineapparel" />
-                            <area shape="rect" coords="337,0,571,376" href="women/fineapparel/fineapparel.html?intcmp=hp-dress_sale" />
-                            <area shape="rect" coords="572,0,812,376" href="women/activewear/activewear.html?intcmp=hp-women_activewear" />
+                            <area shape="rect" coords="0,0,337,507" href="men/fineapparel/fineapparel.html?intcmp=hp-men_fineapparel" onclick="handleClick('men_fineapparel')" />
+                            <area shape="rect" coords="337,0,571,376" href="women/fineapparel/fineapparel.html?intcmp=hp-dress_sale" onclick="handleClick('women_fineapparel')"/>
+                            <area shape="rect" coords="572,0,812,376" href="women/activewear/activewear.html?intcmp=hp-women_activewear" onclick="handleClick('women_activewear')"/>
                             <area shape="rect" coords="338,377,812,507" href="company/chargecard_application1.html?intcmp=homepage-cc-advert" />
                         </map>
                     </td>
