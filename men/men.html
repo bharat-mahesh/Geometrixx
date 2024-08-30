@@ -18,6 +18,21 @@
             server: "Geometrixx Clothiers Site"
         },
     };
+    function handleClick(category,href){
+        var eventInfo = {
+        eventAction: "ctaClick",
+        eventName: "Click on " + category,
+        eventCategory: category,
+        eventTimestamp: new Date().toISOString(),
+        eventHref: href
+    }
+    
+    _satellite.track('Link_Click', {
+        eventAction: eventInfo.eventAction,
+        eventName: eventInfo.eventName,
+        eventCategory: eventInfo.eventCategory
+    })
+        }
 </script>
 
     <title>Geometrixx|Men</title>
@@ -51,7 +66,7 @@
             <!--start logo and head-->
 
             <div class="head_logo">
-                <a href="../index.html" onmouseover="document.jj.src='https://ats-sb.adobe.com/jjsite/include/images/jj_logo_green.png'" onmouseout="document.jj.src='https://ats-sb.adobe.com/jjsite/include/images/jj_logo_black.png'">
+                <a href="../index.html" onclick="handleClick('Home')" onmouseover="document.jj.src='https://ats-sb.adobe.com/jjsite/include/images/jj_logo_green.png'" onmouseout="document.jj.src='https://ats-sb.adobe.com/jjsite/include/images/jj_logo_black.png'">
                     <img src="https://ats-sb.adobe.com/jjsite/include/images/jj_logo_black.png" border="0" name="jj" />
                 </a>
                 <br />
@@ -89,19 +104,19 @@
                             <!--Menu Start-->
                             <ul id="sddm">
 
-                                <li><a href="../women/women.html" onmouseover="mopen('m2')" onmouseout="mclosetime()">WOMEN</a>
+                                <li><a href="../women/women.html" onmouseover="mopen('m2')" onmouseout="mclosetime()" onclick="handleClick('Women')">WOMEN</a>
                                     <div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-                                        <a href="../women/activewear/activewear.html">Activewear</a>
-                                        <a href="../women/fineapparel/fineapparel.html">Fine Apparel</a>
+                                        <a href="../women/activewear/activewear.html" onclick="handleClick('women_activewear')">Activewear</a>
+                                        <a href="../women/fineapparel/fineapparel.html" onclick="handleClick('women_fineapparel')">Fine Apparel</a>
                                         <a href="#">Footwear</a>
                                         <a href="#">Handbags</a>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="../men/men.html" onmouseover="mopen('m3')" onmouseout="mclosetime()">MEN</a>
+                                    <a href="../men/men.html" onmouseover="mopen('m3')" onmouseout="mclosetime()" onclick="handleClick('Men')">MEN</a>
                                     <div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-                                        <a href="../men/activewear/activewear.html">Activewear</a>
-                                        <a href="../men/fineapparel/fineapparel.html">Fine Apparel</a>
+                                        <a href="../men/activewear/activewear.html" onclick="handleClick('men_activewear')">Activewear</a>
+                                        <a href="../men/fineapparel/fineapparel.html" onclick="handleClick('men_fineapparel')">Fine Apparel</a>
                                         <a href="#">Footwear</a>
                                         <a href="#">Accessories</a>
                                     </div>
@@ -179,22 +194,22 @@
                     <div class="categorypage">
                         <td valign="top">
                             <div style="width:195px;margin-right:5px;">
-                                <a href="activewear/activewear.html">
+                                <a href="activewear/activewear.html" onclick="handleClick('men_activewear')">
                                     <img src="https://ats-sb.adobe.com/jjsite/include/images/active_men.jpg" class="photo" width="190" border="0" />
                                 </a>
                                 <br />
                                 <div class="category">
-                                    <a href="activewear/activewear.html">Shop<br />Activewear</a>
+                                    <a href="activewear/activewear.html" onclick="handleClick('men_activewear')">Shop<br />Activewear</a>
                                 </div>
                             </div>
                         </td>
                         <td valign="top">
                             <div style="width:195px;margin-right:5px;">
-                                <a href="fineapparel/fineapparel.html">
+                                <a href="fineapparel/fineapparel.html" onclick="handleClick('men_fineapparel')">
                                     <img src="https://ats-sb.adobe.com/jjsite/include/images/fa_man.jpg" class="photo" width="190" border="0" />
                                 </a>
                                 <br />
-                                <div class="category"><a href="fineapparel/fineapparel.html">Shop<br />Fine Apparel</a>
+                                <div class="category"><a href="fineapparel/fineapparel.html" onclick="handleClick('men_fineapparel')">Shop<br />Fine Apparel</a>
                                 </div>
                             </div>
                         </td>
