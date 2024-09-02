@@ -27,7 +27,6 @@
         };
         function handleClick(href){
         _satellite.track('scAdd', {
-        
     })
     }
     </script>
@@ -220,7 +219,7 @@
                 Made from happy silk worms. Happy silk worms make better silk.
                 <p><span class="cart">
 <form action="../../checkout/shoppingcart.html">
-<button type=submit onclick="simpleCart.add('name=Silk Dress','price=2449.99','image=https://ats-sb.adobe.com/jjsite/include/silk_dress.jpg');" name="sku" value="101344" class="button" onclick="handleClick('women_activewear')">ADD TO CART</button>
+<button type=submit onclick="handleClick(),simpleCart.add('name=Silk Dress','price=2449.99','image=https://ats-sb.adobe.com/jjsite/include/silk_dress.jpg');" name="sku" value="101344" class="button" onclick="handleClick('women_activewear')">ADD TO CART</button>
 </form>
 </span>
                     <p />
