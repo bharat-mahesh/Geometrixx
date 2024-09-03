@@ -22,9 +22,15 @@
             product: {
                 productID: "201241",
                 productName: "Blue Shirt",
-                productPrice: "289.99"
+                productPrice: "289.99",
+                productCategory: "Men|Fine Apparel",
+                productQuantity: "1"
             },
         };
+        function handleClick(){            
+        _satellite.track('scAdd', {
+    })
+    }
     </script>
 
     <title>Geometrixx|Men|Fine Apparel|Blue Shirt</title>
@@ -246,7 +252,7 @@
                 <p>
                     <span class="cart">
 <form action="../../checkout/shoppingcart.html">
-<button type=submit onclick="simpleCart.add('name=Blue Shirt','price=289.99','image=https://ats-sb.adobe.com/jjsite/include/man-apparel4.jpg');" name="sku" value="201241" class="button">ADD TO CART</button>
+<button type=submit onclick="handleClick();simpleCart.add('name=Blue Shirt','price=289.99','image=https://ats-sb.adobe.com/jjsite/include/man-apparel4.jpg');" name="sku" value="201241" class="button">ADD TO CART</button>
 </form>
 </span>
                     <p />

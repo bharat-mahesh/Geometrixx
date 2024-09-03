@@ -22,9 +22,15 @@
             product: {
                 productID: "100233",
                 productName: "Scrunched Leg Cargo Pants",
-                productPrice: "650.00"
+                productPrice: "650.00",
+                productCategory: "Women|Activewear",
+                productQuantity: "1"
             },
         };
+        function handleClick(){            
+        _satellite.track('scAdd', {
+    })
+    }
     </script>
 
     <title>Geometrixx|Women|Activewear|Scrunched Leg Cargo Pants</title>
@@ -227,7 +233,7 @@
                 <p>
                     <span class="cart">
 <form action="../../checkout/shoppingcart.html">
-<button type=submit onclick="simpleCart.add('name=Scrunched Leg Cargo Pants','price=650.00','image=https://ats-sb.adobe.com/jjsite/include/active4.jpg');" name="sku" value="100233" class="button">ADD TO CART</button>
+<button type=submit onclick="handleClick();simpleCart.add('name=Scrunched Leg Cargo Pants','price=650.00','image=https://ats-sb.adobe.com/jjsite/include/active4.jpg');" name="sku" value="100233" class="button">ADD TO CART</button>
 </form>
 </span>
 

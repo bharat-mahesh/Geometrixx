@@ -22,9 +22,15 @@
             product: {
                 productID: "100244",
                 productName: "Front-Zip Ski Jacket",
-                productPrice: "1714.99"
+                productPrice: "1714.99",
+                productCategory: "Women|Activewear",
+                productQuantity: "1"
             },
         };
+        function handleClick(){            
+        _satellite.track('scAdd', {
+    })
+    }
     </script>
 
     <title>Geometrixx|Women|Activewear|Front-Zip Ski Jacket</title>
@@ -213,7 +219,7 @@
                 It's stylishly puffy.
                 <p><span class="cart">
 <form action="../../checkout/shoppingcart.html">
-<button type=submit onclick="simpleCart.add('name=Front-Zip Ski Jacket','price=1714.99','image=https://ats-sb.adobe.com/jjsite/include/images/active3.jpg');" name="sku" value="100244" class="button">ADD TO CART</button>
+<button type=submit onclick="handleClick();simpleCart.add('name=Front-Zip Ski Jacket','price=1714.99','image=https://ats-sb.adobe.com/jjsite/include/images/active3.jpg');" name="sku" value="100244" class="button">ADD TO CART</button>
 </form>
 </span>
                     <p />

@@ -22,9 +22,15 @@
             product: {
                 productID: "200244",
                 productName: "Sport Jacket",
-                productPrice: "240.00"
+                productPrice: "240.00",
+                productCategory: "Men|Activewear",
+                productQuantity: "1"
             },
         };
+        function handleClick(){            
+        _satellite.track('scAdd', {
+    })
+    }
     </script>
 
     <title>Geometrixx|Men|Activewear|Sport Jacket</title>
@@ -212,7 +218,7 @@
                 <p>
                     <span class="cart">
 <form action="../../checkout/shoppingcart.html">
-<button type=submit onclick="simpleCart.add('name=Sport Jacket','price=240.00','image=https://ats-sb.adobe.com/jjsite/include/man-active4.jpg');" name="sku" value="200244" class="button">ADD TO CART</button>
+<button type=submit onclick="handleClick();simpleCart.add('name=Sport Jacket','price=240.00','image=https://ats-sb.adobe.com/jjsite/include/man-active4.jpg');" name="sku" value="200244" class="button">ADD TO CART</button>
 </form>
 </span>
                     <p />

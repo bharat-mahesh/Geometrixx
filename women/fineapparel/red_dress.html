@@ -22,9 +22,15 @@
             product: {
                 productID: "101341",
                 productName: "Red Dress",
-                productPrice: "4720.00"
+                productPrice: "4720.00",
+                productCategory: "Women|Fine Apparel",
+                productQuantity: "1"
             },
         };
+        function handleClick(){            
+        _satellite.track('scAdd', {
+    })
+    }
     </script>
 
 
@@ -216,7 +222,7 @@
                 <p><span class="cart">
 
 <form action="../../checkout/shoppingcart.html">
-<button type=submit onclick="simpleCart.add('name=Red Dress','price=4720.00','image=https://ats-sb.adobe.com/jjsite/include/reddress.jpg');" name="addToCart" value="101341" class="button">ADD TO CART</button>
+<button type=submit onclick="handleClick();simpleCart.add('name=Red Dress','price=4720.00','image=https://ats-sb.adobe.com/jjsite/include/reddress.jpg');" name="addToCart" value="101341" class="button">ADD TO CART</button>
 </form>
 </span>
                     <p />

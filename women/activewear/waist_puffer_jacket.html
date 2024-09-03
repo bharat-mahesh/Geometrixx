@@ -22,9 +22,15 @@
             product: {
                 productID: "100240",
                 productName: "Tie-Waist Puffer Jacket",
-                productPrice: "1849.99"
+                productPrice: "1849.99",
+                productCategory: "Women|Activewear",
+                productQuantity: "1"
             },
         };
+        function handleClick(){            
+        _satellite.track('scAdd', {
+    })
+    }
     </script>
 
     <title>Geometrixx|Women|Activewear|Tie-Waist Puffer Jacket</title>
@@ -226,7 +232,7 @@
                 <p>
                     <span class="cart">
 <form action="../../checkout/shoppingcart.html">
-<button type=submit onclick="simpleCart.add('name=Tie-Waist Puffer Jacket','price=1849.99','image=https://ats-sb.adobe.com/jjsite/include/active1.jpg');"  name="sku" value="100240" class="button">ADD TO CART</button>
+<button type=submit onclick="handleClick();simpleCart.add('name=Tie-Waist Puffer Jacket','price=1849.99','image=https://ats-sb.adobe.com/jjsite/include/active1.jpg');"  name="sku" value="100240" class="button">ADD TO CART</button>
 </form>
 </span>
 

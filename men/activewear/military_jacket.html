@@ -22,9 +22,15 @@
             product: {
                 productID: "200241",
                 productName: "Military Jacket",
-                productPrice: "750.00"
+                productPrice: "750.00",
+                productCategory: "Men|Activewear",
+                productQuantity: "1"
             },
         };
+        function handleClick(){            
+        _satellite.track('scAdd', {
+    })
+    }
     </script>
 
     <title>Geometrixx|Men|Activewear|Military Jacket</title>
@@ -210,7 +216,7 @@
                 <p>
                     <span class="cart">
 <form action="../../checkout/shoppingcart.html">
-<button type=submit onclick="simpleCart.add('name=Military Jacket','price=750.00','image=https://ats-sb.adobe.com/jjsite/include/active_men.jpg');" name="sku" value="200241" class="button">ADD TO CART</button>
+<button type=submit onclick="handleClick();simpleCart.add('name=Military Jacket','price=750.00','image=https://ats-sb.adobe.com/jjsite/include/active_men.jpg');" name="sku" value="200241" class="button">ADD TO CART</button>
 </form>
 
 </span>
