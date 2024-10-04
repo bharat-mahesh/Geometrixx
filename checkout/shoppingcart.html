@@ -11,25 +11,41 @@
 
 
     <script>
-        var digitalData = digitalData || {};
-        digitalData = {
-            page: {
-                pageName: "Checkout:Shopping Cart",
-                siteSection: "Checkout",
-                server: "Geometrixx Clothiers Site"
+        window.geometData = window.geometData || [];
+        window.geometData.push({
+            "event":"cartView",
+            "page": {
+                "pageName": "Checkout:Shopping Cart",
+                "siteSection": "Checkout",
+                "server": "Geometrixx Clothiers Site"
             },
-            cart:{
-                product:{
-                    productName: "Tuxedo",
-                    productQuantity: "1",
-                    productPrice: "2600.00",
-                    productTotal: "2600.00"
+            'cart':{
+                "product":{
+                    "productName": "Tuxedo",
+                    "productQuantity": "1",
+                    "productPrice": "2600.00",
+                    "productTotal": "2600.00"
                 }
             }
-        };
+        })
         function handleClick(){       
-        _satellite.track('scCheckout', {
-    })
+        window.geometData = window.geometData || [];
+        window.geometData.push({
+            "event":"Checkout",
+            "page": {
+                "pageName": "Checkout:Shopping Cart",
+                "siteSection": "Checkout",
+                "server": "Geometrixx Clothiers Site"
+            },
+            'cart':{
+                "product":{
+                    "productName": "Tuxedo",
+                    "productQuantity": "1",
+                    "productPrice": "2600.00",
+                    "productTotal": "2600.00"
+                }
+            }
+        })
     }
     </script>
 

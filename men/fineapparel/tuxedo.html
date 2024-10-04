@@ -11,25 +11,41 @@
 
 
     <script>
-        var digitalData = digitalData || {};
-        digitalData = {
-            page: {
-                pageName: "",
-                siteSection: "Men",
-                siteSubsection: "Fine Apparel",
-                server: "Geometrixx Clothiers Site"
+        window.geometData = window.geometData || [];
+        window.geometData.push({
+            "event":"prodView",
+            "page": {
+                "pageName": "",
+                "siteSection": "Men",
+                "siteSubsection": "Fine Apparel",
+                "server": "Geometrixx Clothiers Site"
             },
-            product: {
-                productID: "201233",
-                productName: "Tuxedo",
-                productPrice: "2600.00",
-                productCategory: "Men|Fine Apparel",
-                productQuantity: "1"
+            "product": {
+                "productID": "201233",
+                "productName": "Tuxedo",
+                "productPrice": "2600.00",
+                "productCategory": "Men|Fine Apparel",
+                "productQuantity": "1"
             },
-        };
+        })
         function handleClick(){            
-        _satellite.track('scAdd', {
-    })
+        _window.geometData = window.geometData || [];
+        window.geometData.push({
+            "event":"cartAdd",
+            "page": {
+                "pageName": "",
+                "siteSection": "Men",
+                "siteSubsection": "Fine Apparel",
+                "server": "Geometrixx Clothiers Site"
+            },
+            "product": {
+                "productID": "201233",
+                "productName": "Tuxedo",
+                "productPrice": "2600.00",
+                "productCategory": "Men|Fine Apparel",
+                "productQuantity": "1"
+            },
+        })
     }
     </script>
 

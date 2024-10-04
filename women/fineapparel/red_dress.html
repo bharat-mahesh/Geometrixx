@@ -11,25 +11,41 @@
 
     <script src="https://assets.adobedtm.com/2778e791fb2f/30776d524a0c/launch-b7a127117198-development.min.js" async></script>
     <script>
-        var digitalData = digitalData || {};
-        digitalData = {
-            page: {
-                pageName: "",
-                siteSection: "Women",
-                siteSubsection: "Fine Apparel",
-                server: "Geometrixx Clothiers Site"
+        window.geometData = window.geometData || [];
+        window.geometData.push({
+            "event":"prodView",
+            "page": {
+                "pageName": "Women:Fine Apparel:Black Dress",
+                "siteSection": "Women",
+                "siteSubsection": "Fine Apparel",
+                "server": "Geometrixx Clothiers Site"
             },
-            product: {
-                productID: "101341",
-                productName: "Red Dress",
-                productPrice: "4720.00",
-                productCategory: "Women|Fine Apparel",
-                productQuantity: "1"
+            "product": {
+                "productID": "101341",
+                "productName": "Red Dress",
+                "productPrice": "4720.00",
+                "productCategory": "Women|Fine Apparel",
+                "productQuantity": "1"
             },
-        };
+        })
         function handleClick(){            
-        _satellite.track('scAdd', {
-    })
+            window.geometData = window.geometData || [];
+        window.geometData.push({
+            "event":"cartAdd",
+            "page": {
+                "pageName": "Women:Fine Apparel:Black Dress",
+                "siteSection": "Women",
+                "siteSubsection": "Fine Apparel",
+                "server": "Geometrixx Clothiers Site"
+            },
+            "product": {
+                "productID": "101341",
+                "productName": "Red Dress",
+                "productPrice": "4720.00",
+                "productCategory": "Women|Fine Apparel",
+                "productQuantity": "1"
+            },
+        })
     }
     </script>
 

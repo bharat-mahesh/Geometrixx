@@ -10,29 +10,27 @@
     <!--Place DTM header above this-->
 
     <script>
-        var digitalData = digitalData || {};
-        digitalData = {
-            page: {
-                pageName: "Women",
-                siteSection: "Women",
-                server: "Geometrixx Clothiers Site"
+         window.geometData = window.geometData || [];
+         window.geometData.push({
+            "event":"pageView",
+            "page": {
+                "pageName": "Women",
+                "siteSection": "Women",
+                "server": "Geometrixx Clothiers Site"
             },
-        };
+        })
         function handleClick(category,href){
-        var eventInfo = {
-        eventAction: "ctaClick",
-        eventName: "Click on " + category,
-        eventCategory: category,
-        eventTimestamp: new Date().toISOString(),
-        eventHref: href
-    }
-    
-    _satellite.track('Link_Click', {
-        eventAction: eventInfo.eventAction,
-        eventName: eventInfo.eventName,
-        eventCategory: eventInfo.eventCategory
-    })
+        window.geometData.push({
+        "event":"ctaTracking",
+        "CTAInfo":{
+        "eventAction": "CtaClick",
+        "eventName": "Click on " + category,
+        "eventCategory": category,
         }
+        
+
+    })
+}
     </script>
 
 

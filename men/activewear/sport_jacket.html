@@ -11,25 +11,41 @@
 
 
     <script>
-        var digitalData = digitalData || {};
-        digitalData = {
-            page: {
-                pageName: "Men:Activewear:Sport Jacket",
-                siteSection: "Men",
-                siteSubsection: "Activewear",
-                server: "Geometrixx Clothiers Site"
+        window.geometData = window.geometData || [];
+        window.geometData.push( {
+            "event":"prodView",
+            "page": {
+                "pageName": "Men:Activewear:Sport Jacket",
+                "siteSection": "Men",
+                "siteSubsection": "Activewear",
+                "server": "Geometrixx Clothiers Site"
             },
-            product: {
-                productID: "200244",
-                productName: "Sport Jacket",
-                productPrice: "240.00",
-                productCategory: "Men|Activewear",
-                productQuantity: "1"
+            "product": {
+                "productID": "200244",
+                "productName": "Sport Jacket",
+                "productPrice": "240.00",
+                "productCategory": "Men|Activewear",
+                "productQuantity": "1"
             },
-        };
+        })
         function handleClick(){            
-        _satellite.track('scAdd', {
-    })
+            window.geometData = window.geometData || [];
+        window.geometData.push( {
+            "event":"cartAdd",
+            "page": {
+                "pageName": "Men:Activewear:Sport Jacket",
+                "siteSection": "Men",
+                "siteSubsection": "Activewear",
+                "server": "Geometrixx Clothiers Site"
+            },
+            "product": {
+                "productID": "200244",
+                "productName": "Sport Jacket",
+                "productPrice": "240.00",
+                "productCategory": "Men|Activewear",
+                "productQuantity": "1"
+            },
+        })
     }
     </script>
 

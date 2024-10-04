@@ -11,15 +11,16 @@
     <script src="https://assets.adobedtm.com/2778e791fb2f/30776d524a0c/launch-b7a127117198-development.min.js" async></script>
 
     <script>
-        var digitalData = digitalData || {};
-        digitalData = {
-            page: {
-                pageName: "Women:Fine Apparel",
-                siteSection: "Women",
-                siteSubsection: "Fine Apparel",
-                server: "Geometrixx Clothiers Site"
+        window.geometData = window.geometData || [];
+        window.geometData.push({
+            "event":"pageView",
+            "page": {
+                "pageName": "Women:Fine Apparel",
+                "siteSection": "Women",
+                "siteSubsection": "Fine Apparel",
+                "server": "Geometrixx Clothiers Site"
             },
-        };
+        })
     </script>
 
 

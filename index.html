@@ -12,37 +12,39 @@
     <script src="https://assets.adobedtm.com/2778e791fb2f/30776d524a0c/launch-b7a127117198-development.min.js" async></script>
     <script>
         
-        var digitalData = digitalData || {};
-        digitalData = {
-            page: {
-                pageName: "Home Page",
-                siteSection: "",
-                siteSubsection: "",
-                server: ""
-            },
-            customer: {
-                loginStatus: "",
-            },
-        };
+        window.geometData = window.geometData || [];
+        window.geometData.push({
+                    "event":"pageView",
+                    "page":{
+                        "pageName": "Home",
+                        "siteSection": "Home",
+                        "siteSubsection": "Home",
+                        }
+                });
+
 
         function handleClick(category,href){
-        var eventInfo = {
-        eventAction: "ctaClick",
-        eventName: "Click on " + category,
-        eventCategory: category,
-        eventTimestamp: new Date().toISOString(),
-        eventHref: href
-    }
-    
-    _satellite.track('Link_Click', {
-        eventAction: eventInfo.eventAction,
-        eventName: eventInfo.eventName,
-        eventCategory: eventInfo.eventCategory
-    })
+        window.geometData.push({
+        "event":"ctaTracking",
+        "CTAInfo":{
+        "eventAction": "CtaClick",
+        "eventName": "Click on " + category,
+        "eventCategory": category,
         }
         
 
-    console.log(eventInfo.eventAction);
+    })
+}
+    
+    // _satellite.track('Link_Click', {
+    //     eventAction: eventInfo.eventAction,
+    //     eventName: eventInfo.eventName,
+    //     eventCategory: eventInfo.eventCategory
+    // })
+    //     }
+        
+
+    // console.log(eventInfo.eventAction);
     
     </script>
 
